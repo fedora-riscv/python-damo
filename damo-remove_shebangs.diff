@@ -1,0 +1,363 @@
+From b37aa4143e065bb1fdc823733acd2686008c6fd5 Mon Sep 17 00:00:00 2001
+From: Michel Alexandre Salim <salimma@fedoraproject.org>
+Date: Wed, 17 May 2023 11:00:40 -0500
+Subject: [PATCH] Remove shebangs from non-executable Python files
+
+These are not meant to be launched, they should not have shebangs
+
+cf. Fedora package review https://bugzilla.redhat.com/show_bug.cgi?id=2203480#c4
+
+Signed-off-by: Michel Alexandre Salim <salimma@fedoraproject.org>
+---
+ _damo_dist.py            | 1 -
+ _damo_fmt_str.py         | 1 -
+ _damo_fs.py              | 1 -
+ _damo_paddr_layout.py    | 1 -
+ _damo_python2_support.py | 1 -
+ _damo_subcmds.py         | 1 -
+ _damon.py                | 1 -
+ _damon_args.py           | 1 -
+ _damon_args_schemes.py   | 1 -
+ _damon_dbgfs.py          | 1 -
+ _damon_result.py         | 1 -
+ _damon_sysfs.py          | 1 -
+ damo_adjust.py           | 1 -
+ damo_features.py         | 1 -
+ damo_fmt_json.py         | 1 -
+ damo_heats.py            | 1 -
+ damo_lru_sort.py         | 1 -
+ damo_monitor.py          | 1 -
+ damo_nr_regions.py       | 1 -
+ damo_reclaim.py          | 1 -
+ damo_record.py           | 1 -
+ damo_report.py           | 1 -
+ damo_report_json.py      | 1 -
+ damo_report_raw.py       | 1 -
+ damo_schemes.py          | 1 -
+ damo_start.py            | 1 -
+ damo_stat.py             | 1 -
+ damo_stat_kdamonds.py    | 1 -
+ damo_stat_regions.py     | 1 -
+ damo_stat_schemes.py     | 1 -
+ damo_stop.py             | 1 -
+ damo_translate_damos.py  | 1 -
+ damo_tune.py             | 1 -
+ damo_validate.py         | 1 -
+ damo_wss.py              | 1 -
+ 35 files changed, 35 deletions(-)
+
+diff --git a/_damo_dist.py b/_damo_dist.py
+index 666fc08c..a7a0e01e 100644
+--- a/_damo_dist.py
++++ b/_damo_dist.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import os
+diff --git a/_damo_fmt_str.py b/_damo_fmt_str.py
+index ba0afdb3..de606524 100644
+--- a/_damo_fmt_str.py
++++ b/_damo_fmt_str.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import platform
+diff --git a/_damo_fs.py b/_damo_fs.py
+index 79588a77..abe4aa96 100644
+--- a/_damo_fs.py
++++ b/_damo_fs.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import os
+diff --git a/_damo_paddr_layout.py b/_damo_paddr_layout.py
+index e563c5f3..89a64e31 100644
+--- a/_damo_paddr_layout.py
++++ b/_damo_paddr_layout.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/_damo_python2_support.py b/_damo_python2_support.py
+index 35945d4d..38d96b7d 100644
+--- a/_damo_python2_support.py
++++ b/_damo_python2_support.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import os
+diff --git a/_damo_subcmds.py b/_damo_subcmds.py
+index 1c6ab245..12c054ec 100644
+--- a/_damo_subcmds.py
++++ b/_damo_subcmds.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/_damon.py b/_damon.py
+index 481e35b5..76a30123 100644
+--- a/_damon.py
++++ b/_damon.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/_damon_args.py b/_damon_args.py
+index aeccf4fc..1f93332b 100644
+--- a/_damon_args.py
++++ b/_damon_args.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/_damon_args_schemes.py b/_damon_args_schemes.py
+index e8974e99..c74d38bb 100644
+--- a/_damon_args_schemes.py
++++ b/_damon_args_schemes.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/_damon_dbgfs.py b/_damon_dbgfs.py
+index 192409ea..3c7a9f2f 100644
+--- a/_damon_dbgfs.py
++++ b/_damon_dbgfs.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/_damon_result.py b/_damon_result.py
+index 4e96b83e..4ade016c 100644
+--- a/_damon_result.py
++++ b/_damon_result.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import collections
+diff --git a/_damon_sysfs.py b/_damon_sysfs.py
+index 023da288..00dd2350 100644
+--- a/_damon_sysfs.py
++++ b/_damon_sysfs.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_adjust.py b/damo_adjust.py
+index fffad332..5e95a7d9 100644
+--- a/damo_adjust.py
++++ b/damo_adjust.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Adjust a damon monitoring result with new attributes"
+diff --git a/damo_features.py b/damo_features.py
+index 875f6e46..982e1264 100644
+--- a/damo_features.py
++++ b/damo_features.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import json
+diff --git a/damo_fmt_json.py b/damo_fmt_json.py
+index e218ff4a..2906a655 100644
+--- a/damo_fmt_json.py
++++ b/damo_fmt_json.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_heats.py b/damo_heats.py
+index d34c0b76..9e2ec526 100644
+--- a/damo_heats.py
++++ b/damo_heats.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_lru_sort.py b/damo_lru_sort.py
+index fd579fd2..621245fd 100644
+--- a/damo_lru_sort.py
++++ b/damo_lru_sort.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Control DAMON_LRU_SORT"
+diff --git a/damo_monitor.py b/damo_monitor.py
+index 240e54c6..014845b6 100644
+--- a/damo_monitor.py
++++ b/damo_monitor.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Record and report data access pattern in realtime"
+diff --git a/damo_nr_regions.py b/damo_nr_regions.py
+index 1061b272..a6ee8d65 100644
+--- a/damo_nr_regions.py
++++ b/damo_nr_regions.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Print out distribution of the number of regions in the given record"
+diff --git a/damo_reclaim.py b/damo_reclaim.py
+index bcdb39ca..d015a45a 100644
+--- a/damo_reclaim.py
++++ b/damo_reclaim.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Control DAMON_RECLAIM"
+diff --git a/damo_record.py b/damo_record.py
+index f032d104..41a8919e 100644
+--- a/damo_record.py
++++ b/damo_record.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_report.py b/damo_report.py
+index eb209bf1..4cb30ca8 100644
+--- a/damo_report.py
++++ b/damo_report.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/damo_report_json.py b/damo_report_json.py
+index 4bfd193b..323332f4 100644
+--- a/damo_report_json.py
++++ b/damo_report_json.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/damo_report_raw.py b/damo_report_raw.py
+index 8b79300d..72acb07a 100644
+--- a/damo_report_raw.py
++++ b/damo_report_raw.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/damo_schemes.py b/damo_schemes.py
+index cce225fd..8cf73608 100644
+--- a/damo_schemes.py
++++ b/damo_schemes.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_start.py b/damo_start.py
+index 58dee476..c84b94bb 100644
+--- a/damo_start.py
++++ b/damo_start.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_stat.py b/damo_stat.py
+index acb05c92..14783137 100644
+--- a/damo_stat.py
++++ b/damo_stat.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import signal
+diff --git a/damo_stat_kdamonds.py b/damo_stat_kdamonds.py
+index f6fcf6f9..ffc1567d 100644
+--- a/damo_stat_kdamonds.py
++++ b/damo_stat_kdamonds.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/damo_stat_regions.py b/damo_stat_regions.py
+index 227ca983..6e42322d 100644
+--- a/damo_stat_regions.py
++++ b/damo_stat_regions.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/damo_stat_schemes.py b/damo_stat_schemes.py
+index d4c53128..9d3f2d4e 100644
+--- a/damo_stat_schemes.py
++++ b/damo_stat_schemes.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ import argparse
+diff --git a/damo_stop.py b/damo_stop.py
+index 6d10470a..ead9c4f7 100644
+--- a/damo_stop.py
++++ b/damo_stop.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_translate_damos.py b/damo_translate_damos.py
+index 7f8c71dc..f9b56931 100644
+--- a/damo_translate_damos.py
++++ b/damo_translate_damos.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_tune.py b/damo_tune.py
+index 2da54b3c..e6cc6503 100644
+--- a/damo_tune.py
++++ b/damo_tune.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ """
+diff --git a/damo_validate.py b/damo_validate.py
+index 3a6eeac1..dedcc4ba 100644
+--- a/damo_validate.py
++++ b/damo_validate.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Validate a given damo-record result file"
+diff --git a/damo_wss.py b/damo_wss.py
+index cd453887..b8dd4bd6 100644
+--- a/damo_wss.py
++++ b/damo_wss.py
+@@ -1,4 +1,3 @@
+-#!/usr/bin/env python3
+ # SPDX-License-Identifier: GPL-2.0
+ 
+ "Print out the distribution of the working set sizes of the given trace"

@@ -8,7 +8,7 @@ management optimizations.}
 
 Name:           python-%{srcname}
 Version:        2.0.6
-Release:        %autorelease
+Release:        rv64.%{autorelease}
 Summary:        Data Access Monitoring Operator
 
 License:        GPL-2.0-only
@@ -19,7 +19,7 @@ Source:        %{url}/archive/v%{version}/%{srcname}-%{version}.tar.gz
 
 BuildArch:      noarch
 # some tests assume 64-bit and fail on ix86
-ExclusiveArch:  x86_64 aarch64 ppc64le s390x noarch
+ExclusiveArch:  x86_64 aarch64 ppc64le s390x noarch riscv64
 
 %description %{_description}
 

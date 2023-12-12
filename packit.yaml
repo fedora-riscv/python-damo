@@ -11,7 +11,7 @@ jobs:
   dist_git_branches:
     - fedora-rawhide
   actions:
-    changelog-entry:
+    commit-message:
     - bash -c 'echo "Update to ${PACKIT_PROJECT_VERSION}"'
 
 - job: koji_build

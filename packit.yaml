@@ -9,18 +9,13 @@ jobs:
 - job: pull_from_upstream
   trigger: release
   dist_git_branches:
-    - fedora-all
+    - fedora-rawhide
   actions:
     changelog-entry:
-    - bash -c 'echo "- Update to ${PACKIT_PROJECT_VERSION}"'
+    - bash -c 'echo "Update to ${PACKIT_PROJECT_VERSION}"'
 
 - job: koji_build
   trigger: commit
   allowed_committers: ['packit']
   dist_git_branches:
-    - fedora-all
-
-- job: bodhi_update
-  trigger: commit
-  dist_git_branches:
-    - fedora-branched
+    - fedora-rawhide

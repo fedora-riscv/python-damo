@@ -23,7 +23,7 @@ Source:        %{url}/archive/v%{version}/%{srcname}-%{version}.tar.gz
 
 BuildArch:      noarch
 # some tests assume 64-bit and fail on ix86
-ExclusiveArch:  x86_64 aarch64 ppc64le s390x noarch
+ExclusiveArch:  x86_64 aarch64 ppc64le s390x riscv64 noarch
 
 %description %{_description}
 
